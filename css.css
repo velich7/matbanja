@@ -1,0 +1,487 @@
+/*----- FONTOVI -----*/
+
+@font-face {
+    font-family: 'RobotoCondensed-Regular';
+    src: url('fonts/rc-r.ttf');
+}
+
+@font-face {
+    font-family: 'RobotoCondensed-Light';
+    src: url('fonts/rc-l.ttf');
+}
+
+@font-face {
+    font-family: 'RobotoCondensed-Bold';
+    src: url('fonts/rc-b.ttf');
+}
+
+body {
+	background: #5478ac url('img/bg.jpg') top center no-repeat fixed;
+    margin: 0;
+}
+
+.sadrzaj {
+	width: 60%;
+	max-width: 1000px;
+    margin: 0 auto;
+}
+
+/*----- ZAGLAVLJE -----*/
+
+header {
+    height: 120px;
+	margin: 0 auto;
+	background: transparent;
+}
+
+#logo {
+	margin: 25px 0 0 0;
+}
+
+.top-ul {
+	float: right;
+	list-style-type: none;
+    padding: 0;
+	margin: 45px 0 0 0;
+}
+
+.top-ul a {
+    display: block;
+	color: #fff;
+	font-size: 22px;
+	text-decoration: none;
+	transition: all 0.2s ease-in-out 0s;
+}
+
+.top-ul a:hover {
+	color: #eeda51;
+}
+
+.top-ul li {
+	float: left;
+	margin: 0 0 0 5px;
+}
+
+.top-ul input {
+	width: 200px;
+	height: 28px;
+	background: transparent url("img/search.png") right center no-repeat;
+	border: 1px solid #fff;
+	color: #d8d8d8;
+	margin: 0 0 0 0;
+	padding-left: 5px;
+	font-family:  'RobotoCondensed-Regular';
+	border-radius: 0;
+}
+
+.top-ul input:focus {
+	border: 1px solid #fff;
+	background: url("img/search.png") right center no-repeat, url("img/search_bg.png") repeat;
+	color: #fff;
+	padding-left: 5px;
+}
+
+/* ----- NAVIGACIONI MENI ----- */
+
+.menu ul:after {
+    display: block;
+    clear: both;
+}
+
+.menu {
+    max-width: 1000px;
+    margin: 0 auto;
+	height: 41px;
+    background: url("img/search_bg.png") repeat;
+}
+
+.menu ul {
+	margin: 0;
+	padding: 0;
+}
+ 
+.menu li {
+    margin: 0;
+    list-style: none;
+    font-family: 'RobotoCondensed-Regular';
+	text-transform: uppercase;
+	border-right: 1px solid #051225;
+}
+
+.menu li.last {
+	border-right: none;
+}
+ 
+.menu a {
+    transition: all linear 0.15s;
+    color: #fff;
+	text-shadow: 1px 1px 0 #000;
+	text-decoration: none;
+}
+ 
+.menu li:hover > a, .menu .current-item > a {
+    text-decoration: none;
+    color: #eeda51;
+    background: url("img/search_bg.png") repeat;
+}
+ 
+.arrow {
+    font-size: 12px;
+    line-height: 0%;
+}
+
+.menu > ul > li {
+    float: left;
+    position: relative;
+    font-size: 16px;
+}
+ 
+.menu > ul > li > a {
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+.menu li:hover .sub-menu {
+    z-index: 1;
+    opacity: 1;
+}
+ 
+.sub-menu {
+    width: 185px;
+    padding: 5px 0px;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity linear 0.15s;
+	background: url("img/search_bg.png") repeat;
+}
+ 
+.sub-menu li {
+    display: block;
+    font-size: 14px;
+	border-right: none;
+}
+ 
+.sub-menu li a {
+    padding: 10px 10px;
+    display: block;
+	color: #fff;
+}
+ 
+.sub-menu li a:hover, .sub-menu .current-item a {
+    background: url("img/search_bg.png") repeat;
+	padding-left: 15px;
+}
+
+/* ----- SLAJDER ----- */
+
+#sliderFrame {
+	height: 340px;
+}
+
+/* ----- ARTIKLI ----- */
+
+.artikli {
+	max-width: 1000px;
+    margin: 10px auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.artikal {
+	width: calc(50% - 5px);
+	height: 220px;
+	background: url("img/search_bg.png") repeat;
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+.artikal_img {
+	margin: 10px;
+	width: 240px;
+	height: 200px;
+	vertical-align: text-top;
+	float: left;
+}
+
+.artikal_img:hover {
+	opacity: 0.7;
+	background: #fff;
+}
+
+.artikal_naslov {
+	font-family: 'RobotoCondensed-Bold';
+	text-transform: uppercase;
+	font-size: 20px;
+	padding: 0 10px;
+	color: #fff;
+	text-shadow: 1px 1px 0 #000;
+	margin: 10px 0 0 0;
+}
+
+.artikal_datum {
+	font-family: 'RobotoCondensed-Regular';
+	text-transform: uppercase;
+	font-size: 16px;
+	padding: 0;
+	color: #ccc;
+	text-shadow: 1px 1px 0 #000;
+	margin: 0;
+}
+
+.artikal_ko {
+	font-family: 'RobotoCondensed-Regular';
+	font-size: 14px;
+	text-shadow: 1px 1px 0 #000;
+	padding: 10px;
+	text-align: justify;
+	margin: 0;
+	color: #fff;
+	height: 102px;
+}
+
+.artikal_op {
+	font-family: 'RobotoCondensed-Regular';
+	text-transform: uppercase;
+	text-decoration: none;
+	background: transparent;
+	color: #fff;
+	border: 1px solid #fff;
+	text-shadow: 1px 1px 0 #000;
+	padding: 5px 20px;
+	margin: 10px;
+	transition: all linear 0.15s;
+	height: 34px;
+}
+
+.artikal_op:hover {
+	background: #fff;
+	color: #141414;
+	border: 1px solid #fff;
+	text-shadow: none;
+}
+
+/* ----- POST ----- */
+
+.sadrzaj_post {
+	width: 680px;
+	padding: 10px;
+	float: left;
+	background: url("img/search_bg.png") repeat;
+	margin: 10px 0;
+}
+
+.sadrzaj_post h2 {
+	color: #fff;
+	font-size: 24px;
+	text-align: center;
+	padding: 5px;
+	margin: 0 0 10px 0;
+	text-shadow: 1px 1px 0 #000;
+	font-family: 'RobotoCondensed-Regular';
+}
+
+.sadrzaj_post p {
+	color: #fff;
+	font-size: 14px;
+	text-align: justify;
+	text-shadow: 1px 1px 0 #000;
+	font-family: 'RobotoCondensed-Regular';
+}
+
+.sadrzaj_post h1 {
+	color: #fff;
+	font-size: 24px;
+	text-align: center;
+	text-shadow: 1px 1px 0 #000;
+	font-family: 'RobotoCondensed-Regular';
+	margin: 0;
+}
+
+.sadrzaj_post img {
+	margin: 0 0 10px 0;
+}
+
+.naslov_levo {
+	color: #fff;
+	font-size: 18px;
+	text-align: left;
+	padding: 5px;
+	text-shadow: 1px 1px 0 #000;
+	font-family: 'RobotoCondensed-Regular';
+}
+
+.datum {
+	float: right;
+	margin: 0;
+	color: #b7b7b7;
+}
+
+/*----- SAJDBAR -----*/
+
+.sajdbar {
+	width: 290px;
+	float: right;
+	margin: 10px 0;
+}
+
+.sajdbar_vidzet {
+	margin-bottom: 10px;
+	background: url("img/search_bg.png") repeat;
+	padding: 10px 10px 7px 10px;
+	width: 270px;
+}
+
+.sajdbar_naslov {
+	color: #d8d8d8;
+	font-size: 18px;
+	text-transform: uppercase;
+	text-align: left;
+	background: url("img/search_bg.png") repeat;
+	padding: 5px;
+	margin: 0 0 10px 0;
+	text-shadow: 1px 1px 0 #000;
+	font-family: 'RobotoCondensed-Regular';
+}
+
+.sajdbar_vidzet img:hover {
+	-webkit-filter: sepia(70%);
+	filter: sepia(70%);
+}
+
+/*----- FOTO GALERIJA -----*/
+
+.tambnejls {
+	width: 680px;
+	padding: 10px;
+	margin: 10px 0;
+	background: url("img/search_bg.png") repeat;
+	float: left;
+	
+}
+
+.tambnejls img {
+	margin: 0 2px 2px 0;
+	transition: all linear 0.15s;
+	-webkit-filter: sepia(70%);
+	filter: sepia(70%);
+}
+
+.tambnejls img:hover {
+	-webkit-filter: sepia(0%);
+	filter: sepia(0%);
+}
+
+/*----- VIDEO GALERIJA -----*/
+
+.video_pl {
+	width: 680px;
+	float: left;
+	padding: 10px;
+	background: url("img/search_bg.png") repeat;
+	margin: 10px 0;
+}
+
+/*----- FOOTER LINKOVI -----*/
+
+.footer-widgets {
+	max-width: 1000px;
+	margin: 0 auto 0 auto;
+	background: url("img/search_bg.png") repeat;
+	clear: both;
+	font-family: 'RobotoCondensed-Regular';
+	display: -webkit-flex; /* Safari */
+    -webkit-align-items: flex-start; /* Safari 7.0+ */
+    display: flex;
+    align-items: flex-start;
+}
+
+.cat_footer {
+	width: 250px;
+	padding: 0;
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.list_footer {
+	list-style: none;
+	margin-left: -40px;
+}
+
+.cat_footer a {
+	color: #b7b7b7;
+	text-decoration: none;
+	transition: all 0.1s ease-in-out 0s;
+	text-shadow: 1px 1px 0 #000;
+}
+
+.cat_footer a:hover {
+	color: #eeda51;
+}
+
+.cat_footer_h {
+	color: #d8d8d8;
+	font-size: 16px;
+	text-align: left;
+	text-shadow: 1px 1px 0 #000;
+	font-family: 'RobotoCondensed-Regular';
+}
+
+.soc_footer {
+	list-style-type: none;
+    padding: 0;
+	margin: 0;
+}
+
+.soc_footer a {
+    display: block;
+	color: #b7b7b7;
+	font-size: 22px;
+	text-decoration: none;
+	transition: all 0.2s ease-in-out 0s;
+}
+
+.soc_footer a:hover {
+	color: #eeda51;
+}
+
+.soc_footer li {
+	float: left;
+	margin-right: 5px;
+}
+
+/*----- FOOTER -----*/
+
+footer {
+	max-width: 1000px;
+	height: 55px;
+	background: url("img/search_bg.png") repeat;
+	margin: 10px auto;
+}
+
+footer p {
+	padding: 0 10px;
+	color: #fff;
+	font-size: 16px;
+	font-family: 'RobotoCondensed-light';
+	text-shadow: 1px 1px 0 #000;
+}
+
+.futinf_l {
+	float: left;
+}
+
+.futinf_d {
+	float: right;
+}
+
+/*----- RESPONSIVE -----*/
+
+@media screen and (max-width: 800px) {
+	.sadrzaj {
+		max-width: 800px;
+	}
+}
